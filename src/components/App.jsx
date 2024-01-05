@@ -20,11 +20,13 @@ function App() {
           <Router>
             <AuthProvider>
                 <Routes>
-                    <Route exact path="/" Component={Dashboard}/>
-                    <Route exact path="/Update-Profile" Component={UpdateProfile}/>
-                    <Route path="/signup" Component={Signup}/>
-                    <Route path="/login" Component={Login}/>
-                    <Route path="/forgot-password" Component={ForgotPassword}/>
+                    <Route element= {<PrivateRoute />}>
+                    <Route exact path="/" element={<Dashboard/>}/>
+                    </Route>
+                    <Route exact path="/Update-Profile" element={<UpdateProfile/>}/>
+                    <Route path="/signup" element={<Signup/>}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/forgot-password" element={<ForgotPassword/>}/>
                 </Routes>  
             </AuthProvider>    
           </Router>
