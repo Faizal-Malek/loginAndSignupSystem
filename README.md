@@ -38,3 +38,4 @@ VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
 VITE_FIREBASE_PROJECT_ID=your_project_id
 ```
  
+ 
